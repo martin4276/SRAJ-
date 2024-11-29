@@ -1,0 +1,45 @@
+@import '../../styles/main.scss';
+
+.category-filter {
+  margin: 2rem 0;
+  
+  .categories-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .category-btn {
+      background: white;
+      border: 2px solid transparent;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      color: $text-color;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+      
+      &.active {
+        background: $primary-color;
+        color: white;
+        border-color: $primary-color;
+        
+        svg {
+          color: white;
+        }
+      }
+      
+      svg {
+        color: $primary-color;
+      }
+    }
+  }
+}

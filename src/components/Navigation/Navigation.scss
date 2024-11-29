@@ -1,0 +1,57 @@
+@import '../../styles/main.scss';
+
+.navbar {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  
+  .navbar-brand {
+    color: $primary-color;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+  
+  .nav-link {
+    color: $text-color;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    
+    &:hover {
+      color: $primary-color;
+    }
+    
+    &.active {
+      color: $primary-color;
+    }
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      margin-top: 1rem;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin: 0 0.25rem;
+    }
+  }
+}

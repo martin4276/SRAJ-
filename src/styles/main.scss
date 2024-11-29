@@ -1,0 +1,53 @@
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom variables
+$primary-color: #4A90E2;
+$secondary-color: #50E3C2;
+$accent-color: #F5A623;
+$text-color: #333333;
+$background-color: #F8F9FA;
+
+// Global styles
+body {
+  font-family: 'Inter', sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Custom utility classes
+.text-primary-color {
+  color: $primary-color;
+}
+
+.bg-primary-color {
+  background-color: $primary-color;
+}
+
+.btn-primary-custom {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+// Animation classes
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
